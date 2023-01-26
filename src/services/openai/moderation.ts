@@ -6,8 +6,6 @@ import { Configuration, OpenAIApi } from "openai"
  * @throws Exception
  */
 
-const input = process.argv[2]
-
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
 })
