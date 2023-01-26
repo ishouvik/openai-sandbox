@@ -20,7 +20,14 @@ yarn install
 
 ## Usage
 
-- Run yarn moderation to start the moderation process: `yarn moderation "your text"`
+- Build:
+  - One tile build: `yarn build`
+  - Build and watch: `yarn build -w`
+- Web
+  - Without hot reloading (suitable for production): `yarn "web:start`
+  - With hot reloading (suitable for dev environment): `yarn web:start`
+- Exec
+  - Moderation: `yarn exec:moderation "Your text"`
 
 ## Note
 
