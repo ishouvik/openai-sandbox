@@ -2,8 +2,7 @@ import { Configuration, OpenAIApi } from "openai"
 
 /**
  * Use OpenAPI to perform moderation on an input string
- * todo: store apiKey in env file
- * @params argv[2]:string
+ * @params input:string
  * @throws Exception
  */
 
