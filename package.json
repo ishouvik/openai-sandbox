@@ -29,6 +29,7 @@
     "@root": ".",
     "@services": "dist/services",
     "@exec": "dist/exec",
-    "@bin": "dist/bin"
+    "@bin": "dist/bin",
+    "@routes": "dist/routes"
   }
 }

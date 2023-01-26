@@ -13,7 +13,8 @@
       "paths": {
         "@services/*": ["services/*"],
         "@exec": ["exec/*"],
-        "@bin/*": ["bin/*"]
+        "@bin/*": ["bin/*"],
+        "@routes/*": ["routes/*"]
       }
   },
   "include": [
