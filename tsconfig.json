@@ -3,20 +3,18 @@
       "noImplicitAny": false,
       "removeComments": true,
       "preserveConstEnums": true,
-      "module": "es2022",
       "outDir": "./dist",
       "rootDir": "./src",
       "sourceMap": false,
       "esModuleInterop": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "target": "es2022",
-      "moduleResolution": "node",
-      "baseUrl": "src"
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
+      "baseUrl": "src",
+      "paths": {
+        "@services/*": ["services/*"],
+        "@exec": ["exec/*"],
+        "@bin/*": ["bin/*"]
+      }
   },
   "include": [
       "src/**/*"
@@ -24,5 +22,9 @@
   "exclude": [
       "node_modules",
       "**/__tests__/*"
-  ]
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
 }
