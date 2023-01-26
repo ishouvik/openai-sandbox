@@ -21,8 +21,8 @@ yarn install
 ## Usage
 
 - Build:
-  - One tile build: `yarn build`
-  - Build and watch: `yarn build -w`
+  - Production: `yarn build`
+  - Build and watch: `yarn build:dev`
 - Web
   - Without hot reloading (suitable for production): `yarn "web:start`
   - With hot reloading (suitable for dev environment): `yarn web:start`

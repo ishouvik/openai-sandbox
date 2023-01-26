@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.production.json",
+    "build:dev": "tsc -w",
     "exec:moderation": "ts-node ./src/exec/moderation.ts -w",
     "web:start": "node ./dist/bin/www/server.js",
     "web:start:dev": "nodemon ./src/bin/www/server.ts"
