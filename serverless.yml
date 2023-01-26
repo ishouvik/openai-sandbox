@@ -1,0 +1,65 @@
+app: openapi
+service: openapi
+
+package:
+  patterns:
+    - '!.git/**'
+    - '!.github/**'
+    - '!.gitignore'
+    - '!.DS_Store'
+    - '!npm-debug.log'
+    - '!.serverless/**'
+    - '!.serverless_plugins/**'
+    - '!.example.*'
+    - '!yarn-error.log'
+    - '!README.md'
+    - '!logs/*'
+    - '!.travis'
+    - '!./**/__tests__/**'
+    - '!tmp/**'
+    - '!src/**'
+    - '!coverage/**'
+
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, 'production'}
+  region: ${opt:region, 'ap-south-1'}
+  tracing:
+    lambda: true
+    apiGateway: true
+  architecture: arm64
+
+useDotenv: true
+
+functions:
+  api_v1:
+    handler: dist/bin/www/serverless.handler
+    events:
+      - http:
+          method: ANY
+          path: api/v1
+          cors: ${self:custom.cors}
+      - http:
+          method: ANY
+          path: api/v1/{proxy+}
+          cors: ${self:custom.cors}
+
+plugins:
+  - serverless-dotenv-plugin
+
+custom:
+  cors:
+    origin: '*'
+    headers:
+      - Content-Type
+      - X-Amz-Date
+      - Authorization
+      - X-Api-Key
+      - X-Api-Token
+      - X-Amz-Security-Token
+      - X-Amz-User-Agent
+      - Access-Control-Allow-Headers
+      - X-Requested-With
+    allowCredentials: true
