@@ -6,11 +6,11 @@ A package for integrating OpenAI services like moderation using TypeScript.
 
 This package allows you to easily integrate OpenAI's moderation services into your TypeScript project. With this package, you can easily filter text for profanity, hate speech, and more using OpenAI's advanced language models.
 
-## Installation
+## Prerequisite
 
-```shell
-yarn install
-```
+- [Nodejs 18 LTS](https://nodejs.org/en)
+- [Typescript](https://www.typescriptlang.org)
+- [Yarn (preferred)](https://yarnpkg.com) or stick to Npm
 
 ## How to run
 
@@ -24,10 +24,20 @@ yarn install
   - Production: `yarn build`
   - Build and watch: `yarn build:dev`
 - Web
-  - Without hot reloading (suitable for production): `yarn "web:start`
-  - With hot reloading (suitable for dev environment): `yarn web:start`
+  - Without hot reloading (suitable for production): `yarn web:start`
+  - With hot reloading (suitable for dev environment): `yarn web:start:dev`
 - Exec
   - Moderation: `yarn exec:moderation "Your text"`
+
+## Deployment
+
+- Install [AWS CLI](https://aws.amazon.com/cli/)
+- Install serverless:
+  - yarn: `yarn global add serverless`
+  - npm: `npm install serverless -g`
+- Build app: `yarn build`
+- Package (optional): `serverless package`
+- Deploy: `serverless deploy`
 
 ## Note
 
