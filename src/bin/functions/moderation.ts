@@ -1,11 +1,11 @@
 import '../../init'
-import Moderation from "@services/openai/moderation";
+import Service from "@services/openai/moderation";
 
-const moderation = new Moderation()
+const service = new Service()
 
 module.exports.handler = async function (input) {
   try {
-    const res = await moderation.run(input)
+    const res = await service.run(input)
     return {
       input,
       res

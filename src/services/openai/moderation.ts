@@ -1,20 +1,9 @@
-import { Configuration, OpenAIApi } from "openai"
+import BaseService from "./base"
 
-/**
- * Use OpenAPI to perform moderation on an input string
- * @params input:string
- * @throws Exception
- */
-
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
-})
-const openai = new OpenAIApi(configuration)
-
-export default class Service {
+export default class Service extends BaseService {
   async run (input: string) {
     try {
-      const response = await openai.createModeration({
+      const response = await this.openai.createModeration({
         input
       })
       return response.data.results
