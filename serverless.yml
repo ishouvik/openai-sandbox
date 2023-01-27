@@ -33,6 +33,8 @@ functions:
           method: ANY
           path: api/v1/{proxy+}
           cors: ${self:custom.cors}
+  openai_moderation:
+    handler: dist/bin/functions/moderation.handler
 
 plugins:
   - serverless-dotenv-plugin
