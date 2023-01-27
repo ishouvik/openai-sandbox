@@ -35,6 +35,8 @@ functions:
           cors: ${self:custom.cors}
   openai_moderation:
     handler: dist/bin/functions/moderation.handler
+  openai_completion:
+    handler: dist/bin/functions/completion.handler
 
 plugins:
   - serverless-dotenv-plugin
