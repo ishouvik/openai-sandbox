@@ -27,7 +27,7 @@ This package allows you to easily integrate OpenAI's moderation services into yo
   - Without hot reloading (suitable for production): `yarn web:start`
   - With hot reloading (suitable for dev environment): `yarn web:start:dev`
 - Exec
-  - Moderation: `yarn exec:moderation "Your text"`
+  - Moderation: `serverless invoke local --function openai_moderation --data "Your text"`
 
 ## Deployment
 
