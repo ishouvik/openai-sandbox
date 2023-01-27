@@ -3,23 +3,11 @@ service: openapi
 
 package:
   patterns:
-    - '!.git/**'
-    - '!.github/**'
-    - '!.gitignore'
-    - '!.DS_Store'
-    - '!npm-debug.log'
-    - '!.serverless/**'
-    - '!.serverless_plugins/**'
-    - '!.example.*'
-    - '!yarn-error.log'
-    - '!README.md'
-    - '!logs/*'
-    - '!.travis'
-    - '!./**/__tests__/**'
-    - '!tmp/**'
-    - '!src/**'
-    - '!coverage/**'
-
+    - '!**'
+    - 'node_modules/**'
+    - 'package.json'
+    - 'yarn.lock'
+    - 'dist/**'
 
 provider:
   name: aws
